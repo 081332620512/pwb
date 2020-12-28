@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/info', 'InfoController@index');
-Route::get('/galery', 'GaleryCOntroller@index');
+Route::get('/galery', 'GaleryController@index');
+Route::get('/mahasiswa', 'MahasiswaController@index');
+Route::get('/mahasiswa/create', 'MahasiswaController@create');
+Route::post('/mahasiswa/store', 'MahasiswaController@store');
+Route::get('/mahasiswa/{student}', 'MahasiswaController@show');
+Route::get('/jurusan', 'JurusanController@index');
+Route::get('/mahasiswa/delete/{student}','MahasiswaController@destroy');
+Route::get('/mahasiswa/edit/{student}','MahasiswaController@edit');
+Route::post('/mahasiswa/update','MahasiswaController@update');
